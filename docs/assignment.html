@@ -249,7 +249,7 @@ export default class MainScene extends Phaser.Scene {
     <p>Now, update your <code>main.js</code> file to import and use the MainScene.</p>
 
     <h3>3.1: Update main.js to Use the Scene</h3>
-    <p>In your <code>src/main.js</code> file, <strong>add these changes</strong>:</p>
+    <p>In your <code>src/main.js</code> file, <strong>add these NEW and CHANGED updates</strong>:</p>
     <pre><code>// Import Phaser from node_modules
 import Phaser from 'phaser';
 
@@ -333,7 +333,8 @@ new Phaser.Game(config);</code></pre>
     <ul>
       <li>The "Asset Loading Test" text</li>
       <li>The Phaser logo displayed</li>
-      <li>A click sound playing when the scene loads</li>
+      <li>A click sound playing when the scene loads (You may first have to click in the window to hear
+        the sound)</li>
     </ul>
 
     <p>If assets aren't loading, check:</p>
@@ -526,7 +527,8 @@ logo.on('pointerout', () => {
 
     <h3>7.1: Create a Basic Update Method</h3>
     <p>In your <code>src/scenes/MainScene.js</code> file, update the <code>update()</code> method:</p>
-    <pre><code>update(time, delta) {
+    <pre><code>// eslint-disable-next-line no-unused-vars
+  update(time, delta) {
   // The time parameter is the total elapsed time in milliseconds
   // The delta parameter is the time elapsed since the last frame
 
@@ -539,6 +541,8 @@ logo.on('pointerout', () => {
 
     <p><strong>Study this code:</strong></p>
     <ul>
+      <li><code>// eslint-disable-next-line no-unused-vars</code> - Eslint will ignore the very next line for the
+        specific rule no-unused-vars</li>
       <li><code>time</code> - The total elapsed time in milliseconds since the game started</li>
       <li><code>delta</code> - The time in milliseconds since the last frame</li>
       <li>For this simple game, we don't need to add any ongoing logic to the <code>update()</code> method</li>
@@ -574,7 +578,7 @@ logo.on('pointerout', () => {
       <li><strong>Sound Effects</strong>: Add different sounds for different actions</li>
     </ul>
 
-    <p>Here are a few code snippets to help you implement some of these extensions:</p>
+    <p>Here are two code snippet suggestions to help you implement some of these extensions:</p>
 
     <h4>Adding Simple Animation:</h4>
     <pre><code>// In your create() method
@@ -641,7 +645,8 @@ updateTimer() {
       <li><code>updateTimer()</code> - A custom method that decrements the timer and checks for game over</li>
     </ul>
 
-    <p>Implement at least two extensions and document what you've added in your code comments.</p>
+    <p><strong>Implement at least two extensions and document what you've added in your code comments. You are allowed
+        to remove the logo hover effect if it competes with your extension.</strong></p>
   </article>
 
   <article class="card">
